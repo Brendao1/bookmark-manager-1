@@ -10,33 +10,35 @@ As an internet user,
 
 ## Domain Model
 ![Bookmark Manager Domain Model](snapp.jpg)
-# Bookmark_manager
+# Bookmark Manager
 
-## How to use
+## How to use the app
 clone this repository and then run
-$ bundle
+<br>$ bundle
 
 
-## Set up the DEV and TEST databases
+## Set up the databases
 Connect to psql and create the bookmark_manager and bookmark_manager_test databases:
 
-$ psql postgres
-$ CREATE DATABASE bookmark_manager;
-$ CREATE DATABASE bookmark_manager_test;
+<br>$ psql postgres
+<br>$ CREATE DATABASE bookmark_manager;
+<br>$ CREATE DATABASE bookmark_manager_test;
 
 To set up the appropriate tables, connect to each database and run each of the scripts in db/migrations folder in the given order.
 
 To connect to the databases, run the following for each database:
-$ \c bookmark_manager;
-$ \c bookmark_manager_test;
+<br>$ \c bookmark_manager;
+<br>$ \c bookmark_manager_test;
 
 ## To run the Bookmark Manager app:
 $ rackup
 
-## To view bookmarks, navigate to localhost:9292
+## To view bookmarks:
+
+Navigate to localhost:9292
 
 ## To run tests:
-$ RSpec
+$ rspec
 
 ## To run linting:
 $ Rubocop
