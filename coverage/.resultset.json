@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/student/Documents/Projects/Bookmark_manager/spec/bookmark_spec.rb": [
+      "/Users/andrew/Makers/_pairing-challenges/brenda/bookmark-manager-1/spec/bookmark_spec.rb": [
         1,
         null,
         1,
@@ -18,11 +18,18 @@
         1,
         1,
         1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        0,
         null,
         null,
         null
       ],
-      "/Users/student/Documents/Projects/Bookmark_manager/spec/features/viewing_bookmarks_spec.rb": [
+      "/Users/andrew/Makers/_pairing-challenges/brenda/bookmark-manager-1/spec/features/viewing_bookmarks_spec.rb": [
         null,
         null,
         null,
@@ -63,6 +70,6 @@
         null
       ]
     },
-    "timestamp": 1551277620
+    "timestamp": 1551278619
   }
 }
