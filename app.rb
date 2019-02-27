@@ -3,13 +3,18 @@ require './lib/bookmark'
 
 class Bookmarks < Sinatra::Base
   get '/' do
-    "Bookmark Manager!"
+    "Welcome to the Bookmarks Manager!"
   end
 
   get '/bookmarks' do
-    # p ENV
     @bookmarks = Bookmark.all
     erb :'bookmarks/index'
+  end
+
+  post '/bookmarks' do
+    p ENV
+    Bookmark.create(url: params[:url], title: params[:title])
+    redirect '/bookmarks'
   end
 
   get '/bookmarks/new' do

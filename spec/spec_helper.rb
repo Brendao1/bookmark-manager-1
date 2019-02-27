@@ -1,18 +1,19 @@
+### Using the Environment variable to pick the right database
+ENV['ENVIRONMENT'] = 'test'
+
+# Bring in the contents of the 'app.rb' file
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
+require 'capybara'
 require 'capybara/rspec'
+require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
-require 'capybara'
 # require 'features/web_helpers'
 require './app.rb'
 require 'pg'
 require_relative './setup_test_database.rb'
 
-ENV['RACK_ENV'] = 'test'
-
-### Using the Environment variable to pick the right database
-ENV['ENVIRONMENT'] = 'test'
-
+# ENV['RACK_ENV'] = 'test'
 
 Capybara.app = Bookmarks
 

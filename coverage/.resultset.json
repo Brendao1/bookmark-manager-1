@@ -31,12 +31,13 @@
         null,
         null,
         null,
-        0,
-        0,
-        0,
         null,
-        0,
-        0,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
         null,
         null,
         null
@@ -45,9 +46,12 @@
         1,
         null,
         1,
-        0,
-        0,
-        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/student/Documents/Projects/Bookmark_manager/spec/features/adding_bookmarks_spec.rb": [
@@ -57,12 +61,19 @@
         1,
         1,
         1,
-        null,
         1,
         null,
         null
       ],
       "/Users/student/Documents/Projects/Bookmark_manager/spec/features/viewing_bookmarks_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
         1,
         1,
         null,
@@ -75,9 +86,10 @@
         1,
         0,
         null,
+        null,
         null
       ]
     },
-    "timestamp": 1551287498
+    "timestamp": 1551299488
   }
 }

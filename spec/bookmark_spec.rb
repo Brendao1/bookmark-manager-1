@@ -3,7 +3,7 @@ require 'database_helpers'
 
 describe Bookmark do
   describe '.all' do
-    it 'returns all bookmarks' do
+    it 'returns a list of bookmarks' do
       connection = PG.connect(dbname: 'bookmark_manager_test')
 
       # Add the test database
@@ -23,13 +23,14 @@ describe Bookmark do
 
   describe '.create' do
     it 'creates a new bookmark' do
-      bookmark = Bookmark.create(url: 'http://www.testbookmark.com', title: 'Test Bookmark').first
+      bookmark = Bookmark.create(url: 'http://www.testbookmark.com', title: 'Test Bookmark')
       # removed .first
+      # first returns the first element of the array
       # bookmark = Bookmark.create(url: 'http://www.testbookmark.com', title: 'Test Bookmark').first
 
       persisted_data = persisted_data(id: bookmark.id)
       expect(bookmark).to be_a Bookmark
-      expect(bookmark.id).to eq persisted_data.id
+      expect(bookmark.id).to eq persisted_data.first['id']
       # removed .first['id']
       expect(bookmark.title).to eq 'Test Bookmark'
       expect(bookmark.url).to eq 'http://www.testbookmark.com'
