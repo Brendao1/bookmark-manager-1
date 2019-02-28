@@ -8,10 +8,12 @@ class Bookmark
       connection = PG.connect(dbname: 'bookmark_manager')
     end
     result = connection.exec("SELECT * FROM bookmarks;")
-    result.map { |bookmark| bookmark['url']
+    result.map { |bookmark|
+          # result.map { |bookmark| bookmark['url']
         Bookmark.new(id: bookmark['id'], title: bookmark['title'], url: bookmark['url'])
     }
   end
+
 
   def self.create(url:, title:)
     # return false unless is_url?(url)
@@ -21,7 +23,8 @@ class Bookmark
       connection = PG.connect(dbname: 'bookmark_manager')
     end
 
-    result = connection.exec("INSERT INTO bookmarks (title, url) VALUES('#{title}', '#{url}') RETURNING id, url, title")
+    # result = connection.exec("INSERT INTO bookmarks (title, url) VALUES('#{title}', '#{url}') RETURNING id, url, title")
+    result = connection.exec("INSERT INTO bookmarks (title, url) VALUES('#{title}', '#{url}') RETURNING id, title, url")
     Bookmark.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
   end
 

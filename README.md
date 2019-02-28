@@ -18,9 +18,12 @@ clone this repository and then run
 
 
 ## Set up the databases
-Connect to psql and create the bookmark_manager and bookmark_manager_test databases:
+Connect to psql
 
 <br>$ psql postgres
+
+Create the bookmark_manager and bookmark_manager_test databases:
+
 <br>$ CREATE DATABASE bookmark_manager;
 <br>$ CREATE DATABASE bookmark_manager_test;
 

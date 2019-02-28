@@ -6,7 +6,7 @@ feature 'Viewing bookmarks' do
     end
   end
 
-  feature "viewing bookmarks in /bookmarks route" do
+  feature "viewing bookmarks route" do
     scenario "show list of bookmarks" do
 
       Bookmark.create(url: "http://www.makersacademy.com", title: "Makers Academy")
